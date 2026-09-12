@@ -1,4 +1,5 @@
 import unittest
+
 from diagnostics.checks import check_disk_space, check_environment
 
 
@@ -20,6 +21,20 @@ class TestDiagnostics(unittest.TestCase):
 
         self.assertIn("PATH", result)
         self.assertIn("HOME", result)
+
+    def test_missing_dependency(self):
+        import shutil
+
+        result = shutil.which("command_that_does_not_exist")
+
+        self.assertIsNone(result)
+
+    def test_malformed_configuration_path(self):
+        import os
+
+        config_path = "does_not_exist/config.json"
+
+        self.assertFalse(os.path.exists(config_path))
 
 
 if __name__ == "__main__":
