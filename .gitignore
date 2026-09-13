@@ -3,4 +3,6 @@ src/*.egg-info/
 .venv/
 __pycache__/
 *.pyc
-.pytest_cache/
+.pytest_cache/.coverage
+test_inventory.csv
+test_inventory.json
