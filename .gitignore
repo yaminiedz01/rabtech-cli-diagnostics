@@ -1,10 +1,13 @@
-src/*.egg-info/
-src/*.egg-info/
 .venv/
 __pycache__/
 *.pyc
-.pytest_cache/.coverage
+.pytest_cache/
+src/*.egg-info/
+.coverage
 test_inventory.csv
 test_inventory.json
 report.json
 api.db
+inventory_report.pdf
+inventory_report.json
+output.csv

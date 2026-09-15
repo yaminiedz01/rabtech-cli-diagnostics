@@ -11,6 +11,7 @@ dependencies = []
 
 [project.scripts]
 diagnose = "diagnostics.cli:main"
+inventory-report = "diagnostics.report_generator:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
